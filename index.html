@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Cracker Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 100px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .btn {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="page1">
+        <h1>Welcome to Cyber Cracker Courses</h1>
+        <button class="btn" onclick="goToPage2()">Enroll Now</button>
+    </div>
+    
+    <div class="container" id="page2" style="display: none;">
+        <h2>Select Your Course</h2>
+        <button class="btn" onclick="redirectTo('https://youtube.com/playlist?list=PLDI1eL-lBnEBAsL9_39Qbs32hj99UwGP7&si=TkqA7Ekcq73_W6GY')">Ethical Hacking Course</button>
+        <button class="btn" onclick="redirectTo('https://youtube.com/playlist?list=PLDI1eL-lBnEB_e1S70_-16VfbMFqfTtP2&si=0Q8U7SwM7s1OCW5N')">Python Course</button>
+    </div>
+    
+    <script>
+        function goToPage2() {
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'block';
+        }
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
