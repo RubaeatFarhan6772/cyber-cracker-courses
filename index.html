@@ -42,7 +42,14 @@
 <body>
     <div class="container" id="page1">
         <h1>Welcome to Cyber Cracker Courses</h1>
-        <button class="btn" onclick="goToPage2()">Enroll Now</button>
+        <button class="btn" onclick="goToFormPage()">Enroll Now</button>
+    </div>
+    
+    <div class="container" id="formPage" style="display: none;">
+        <h2>Enrollment Form</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdGiC796OWIVKyPteITS3gsbM7msKuNpYZdIWrYFDocE_Tfhw/viewform?usp=dialog" width="600" height="500" style="border: none;"></iframe>
+        <br>
+        <button class="btn" onclick="goToPage2()">Submit & Continue</button>
     </div>
     
     <div class="container" id="page2" style="display: none;">
@@ -52,8 +59,12 @@
     </div>
     
     <script>
-        function goToPage2() {
+        function goToFormPage() {
             document.getElementById('page1').style.display = 'none';
+            document.getElementById('formPage').style.display = 'block';
+        }
+        function goToPage2() {
+            document.getElementById('formPage').style.display = 'none';
             document.getElementById('page2').style.display = 'block';
         }
         function redirectTo(url) {
